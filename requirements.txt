@@ -1,0 +1,9 @@
+streamlit
+scikit-learn
+pandas
+nltk
+spacy
+pymupdf
+python-docx
+requests
+vaderSentiment

@@ -28,12 +28,12 @@ def preprocess_text(text):
     tokens = [lemmatizer.lemmatize(word) for word in tokens if word not in stop_words]
     return ' '.join(tokens)
 
-# --- Model Training ---
+
 print("Starting model training...")
 df = pd.read_csv('data.csv')
 print(f"Loaded {len(df)} records from data.csv.")
 
-df.dropna(subset=['text'], inplace=True) # Ensure no empty text rows
+df.dropna(subset=['text'], inplace=True) 
 df['processed_text'] = df['text'].apply(preprocess_text)
 
 X = df['processed_text']
